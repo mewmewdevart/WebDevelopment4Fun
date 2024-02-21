@@ -8,40 +8,75 @@
     <title>01 - Shop Home</title>
 </head>
 <body>
-    <header>
-        <p class="cupom-page">Ganhe R$ 10,00 de descontos no frete</p>
-        <h1 class="title-page">JordanShoes</h1>
+    <header class="header" role="banner">
+        <h1 class="header__text header__text--cupom">Frete grátis para todo o Brasil</h1>
+        <div class="header__container-banner" role="img" aria-label="Banner">
+            <div class="header__banner-block">
+                <img src="./assets/image/logo.png" alt="" class="header__banner-logo">
+                <h2 class="header__banner-block-title">A melhor loja de Jordan</h2>
+                <p class="header__banner-block-text">O tênis Jordan é fruto de uma velha e forte
+                    parceria entre a Nike e o jogador Michael Jordan.</p>
+            </div>
+        </div>
     </header>
-    <section>
-        <div class="container-banner">
-            <div class="header-banner">
-                <h2>A melhor loja de Jordan</h2>
-                <p>O tênis Jordan é fruto de uma velha e forte parceria  entre a Nike <br>e o jogador Michael Jordan.</p>
-            </div>
-            <div class="banner"></div>
+
+    <section class="section-products" role="region" aria-label="Produtos">
+        <div class="section-products__introduction">
+            <h3 class="section-products__introduction-title">Os melhores em um só lugar</h3>
+            <p class="section-products__introduction-text">
+                A marca Jordan na JordanShoes é a escolha certa para os amantes de sneakers que buscam estilo e conforto.
+            </p>
         </div>
+    
+        <div class="section-products__products">
+            <div class="section-products__products-group" role="group" aria-label="Grupo de Produtos">
+                <div class="product-card" role="article">
+                    <img src="./assets/image/1.png" alt="Tênis Jordan com detalhes verdes" class="product-card__image">
+                    <h4 class="product-card__title">Air Jordan 1 Mid Dutch Green</h4>
+                    <p class="product-card__tag">Tênis Air Jordan</p>
+                    <p class="product-card__price">R$ 1.199,99</p>
+                </div>
+            
+                <div class="product-card" role="article">
+                    <img src="./assets/image/2.png" alt="Tênis Jordan com detalhes roxos e azul" class="product-card__image">
+                    <h4 class="product-card__title">Air Jordan 1 High Zoom CMFT Tropical Twist</h4>
+                    <p class="product-card__tag">Tênis Air Jordan</p>
+                    <p class="product-card__price">R$ 1.049,00</p>
+                </div>
+            
+                <div class="product-card" role="article">
+                    <img src="./assets/image/3.png" alt="Tênis Jordan com detalhes brancos e roxo" class="product-card__image">
+                    <h4 class="product-card__title">Air Jordan 1 Mid Dutch Purple</h4>
+                    <p class="product-card__tag">Tênis Air Jordan</p>
+                    <p class="product-card__price">R$ 1.350,00</p>
+                </div>
 
-        <div class="container-content">
-            <div class="header-content">
-                <h3>Destaques</h3>
-                <p>Frete grátis e chinelo de brinde é aqui, aproveite por tempo limitado. </p>
-            </div>
+				<div class="product-card" role="article">
+                    <img src="./assets/image/4.png" alt="Tênis Jordan com detalhes brancos e predominantemente cinza" class="product-card__image">
+                    <h4 class="product-card__title">Air Jordan 1 Mid GS "Light Smoke Grey"</h4>
+                    <p class="product-card__tag">Tênis Air Jordan</p>
+                    <p class="product-card__price">R$ 1.585,00</p>
+                </div>
 
-            <div class="products-cards">
-                <img src="assets/image/1.png" alt="Tenis Jordan verde e branco" class="card">
-                <img src="assets/image/2.png" alt="Tenis Jordan roxo e branco" class="card">
-                <img src="assets/image/3.png" alt="Tenis Jordan roxo e branco" class="card">
-                <img src="assets/image/4.png" alt="Tenis Jordan cinza, preto e branco" class="card">
-                <img src="assets/image/5.png" alt="Tenis Jordan preto, vermelho e branco" class="card">
-                <img src="assets/image/6.png" alt="Tenis Jordan laranja e branco" class="card">
-                <img src="assets/image/7.png" alt="Tenis Jordan cinza e branco" class="card">
-                <img src="assets/image/8.png" alt="Tenis Jordan preto e branco" class="card">
+				<div class="product-card" role="article">
+                    <img src="./assets/image/5.png" alt="Tênis Jordan com detalhes brancos e laranja" class="product-card__image">
+                    <h4 class="product-card__title">Air Jordan 1 Mid SE Bright Citrus</h4>
+                    <p class="product-card__tag">Tênis Air Jordan</p>
+                    <p class="product-card__price">R$ 949,99</p>
+                </div>
+
+				<div class="product-card" role="article">
+                    <img src="./assets/image/6.png" alt="Tênis Jordan com detalhes brancos e cinza" class="product-card__image">
+                    <h4 class="product-card__title">Air Jordan 1 Mid Grey Camo</h4>
+                    <p class="product-card__tag">Tênis Air Jordan</p>
+                    <p class="product-card__price">R$ 999,99</p>
+                </div>
             </div>
         </div>
-
-        <footer>
-            <h4>Todos os direitos reservados.</h4>
-        </footer>
     </section>
+    <footer>
+        @WebDevelopment4Fun - 
+        <a href="https://github.com/mewmewdevart/WebDevelopment4Fun" target="_blank" rel="noopener noreferrer">MewmewDev</a>
+    </footer>
 </body>
 </html>
