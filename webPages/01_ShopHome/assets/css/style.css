@@ -170,10 +170,6 @@ header .header__text--cupom {
 
 /* Media queries for responsiveness */
 @media only screen and (max-width: 1466px) {
-    section {
-        background-color: red;
-    }
-
     .header__container-banner .header__banner-block {
         width: 80%;
     }
@@ -188,10 +184,6 @@ header .header__text--cupom {
 }
 
 @media only screen and (max-width: 1200px) {
-    section {
-        background-color: purple;
-    }
-
     .header__container-banner {
         background-color: #121214;
         height: 250px;
