@@ -1,94 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="assets/css/variaveis.css">
-	<link rel="stylesheet" href="resetCss.css">
-	<link rel="stylesheet" href="assets/css/style.css">
-	<title>02 - Landing Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>02 - Landing Page</title>
 </head>
 <body>
+    <header class="header" role="banner">
+        <div class="header__container">
+            <div class="header__content">
+                <h1 class="header__title" role="heading" aria-level="1">Encontre os <span class="header__subtitle">melhores artigos</span>
+                    de programação em um só lugar</h1>
+                <p class="header__description">Explore o topo da programação em um só lugar!
+                    Seu destino único para dicas e tendências atuais.</p>
+                <button class="btn btn--content">Buscar artigos</button>
+            </div>
+            <img src="./assets/image/image.svg" alt="" class="header__image" role="img" aria-label="Imagem de destaque">
+        </div>
+    </header>
 
-<header>
-	<div class="container-main">
-		<article>
-			<h1>Lorem ipsum dolor sit amet</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu massa sit amet augue consectetur ullamcorper non ac massa.</p>
-			<button>Botão</button>
-		</article>
-		<div class="image">
-			<img src="./assets/image/image.svg" alt="">
-		</div>
-	</div>
-</header>
-<section>
-	<div class="container-content">
-		<div class="cards">
-			<div class="card">
-				<img src="./assets/image/purple.png" alt="purple image">
-				<div class="body-card">
-					<h2>Título do card</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl.</p>
-				</div>
-			</div>
-			<div class="card">
-				<img src="./assets/image/purple.png" alt="purple image">
-				<div class="body-card">
-					<h2>Título do card</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl.</p>
-				</div>
-			</div>
-			<div class="card">
-				<img src="./assets/image/purple.png" alt="purple image">
-				<div class="body-card">
-					<h2>Título do card</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl.</p>
-				</div>
-			</div>
-		</div>
+    <section class="mainSection" role="region" aria-label="Artigos Recomendados">
+        <div class="mainSection__container">
+            <h2>Artigos recomendados</h2>
+            <div class="mainSection__cards">
+                <div class="mainSection__cards-card" role="article">
+                    <img src="./assets/image/contentCard01.png" alt="">
+                    <h3 class="mainSection__cards-card-title">
+                        O que é linguagem de programação? Conheça as principais
+                    </h3>
+                    <p class="mainSection__cards-card-description">
+                        Uma das mais populares vertentes da tecnologia da informação, a área de...
+                    </p>
+                </div>
 
-		<div class="cards">
-			<div class="card">
-				<img src="./assets/image/purple.png" alt="purple image">
-				<div class="body-card">
-					<h2>Título do card</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl.</p>
-				</div>
-			</div>
-			<div class="card">
-				<img src="./assets/image/purple.png" alt="purple image">
-				<div class="body-card">
-					<h2>Título do card</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl.</p>
-				</div>
-			</div>
-			<div class="card">
-				<img src="./assets/image/purple.png" alt="purple image">
-				<div class="body-card">
-					<h2>Título do card</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+                <div class="mainSection__cards-card" role="article">
+                    <img src="./assets/image/contentCard02.png" alt="">
+                    <h3 class="mainSection__cards-card-title">
+                        Python: por que a linguagem é tão usada para Data Science e finanças?
+                    </h3>
+                    <p class="mainSection__cards-card-description">
+                        O mundo da programação conta com algumas opções de linguagem para...
+                    </p>
+                </div>
 
-<section>
-	<div class="container-forms">
-		<h3>Entre em contato</h3>
-		<div class="formulario">
-			<form>
-				<label for="fname" placeholder="Name"></label><br>
-				<input type="text" id="fname" name="fname" placeholder="Nome"><br>
-				<input type="email" placeholder="E-mail">
-				<input type="telephone" placeholder="Telefone">
-				<textarea placeholder="Mensagem..." rows="10" cols="56" style="resize: none;"></textarea>
-				<input type="submit" value="Enviar Mensagem" class="btn2">
-			  </form>
-			  
+                <div class="mainSection__cards-card" role="article">
+                    <img src="./assets/image/contentCard03.png" alt="">
+                    <h3 class="mainSection__cards-card-title">
+                        GitHub tem receita de US$ 1 bilhão e 90 milhões de usuários
+                    </h3>
+                    <p class="mainSection__cards-card-description">
+                        O popular serviço de repositório de código GitHub foi adquirido pela...
+                    </p>
+                </div>
+
+                <div class="mainSection__cards-card" role="article">
+                    <img src="./assets/image/contentCard04.png" alt="">
+                    <h3 class="mainSection__cards-card-title">
+                        15 comandos no GIT que os desenvolvedores precisam saber
+                    </h3>
+                    <p class="mainSection__cards-card-description">
+                        Uma das mais populares vertentes da tecnologia da informação, a área de...
+                    </p>
+                </div>
+
+                <div class="mainSection__cards-card" role="article">
+                    <img src="./assets/image/contentCard05.png" alt="">
+                    <h3 class="mainSection__cards-card-title">
+                        GIT e GitHub: o que são e quais as diferenças entre eles?
+                    </h3>
+                    <p class="mainSection__cards-card-description">
+                        O mundo da programação conta com algumas opções de linguagem para...
+                    </p>
+                </div>
+
+                <div class="mainSection__cards-card" role="article">
+                    <img src="./assets/image/contentCard06.png" alt="">
+                    <h3 class="mainSection__cards-card-title">
+                        GitHub Copilot ganha integração com GPT-4 e interface conversacional
+                    </h3>
+                    <p class="mainSection__cards-card-description">
+                        O popular serviço de repositório de código GitHub foi adquirido pela...
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<section role="form" aria-label="Formulário de Contato">
+		<div class="container-forms">
+			<h3 class="container-forms__title">Entre em contato</h3>
+			<div class="formulario formulario--contact">
+				<form class="formulario__form">
+					<label for="fname" class="formulario__label" placeholder="Name"></label><br>
+					<input type="text" id="fname" name="fname" placeholder="Nome" class="formulario__input"><br>
+					<input type="email" placeholder="E-mail" class="formulario__input">
+					<input type="tel" placeholder="Telefone" class="formulario__input">
+					<textarea placeholder="Mensagem..." rows="10" cols="56" style="resize: none;" class="formulario__textarea"></textarea>
+					<input type="submit" value="Enviar Mensagem" class="btn formulario__submit">
+				</form>
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
+	
 </body>
 </html>
