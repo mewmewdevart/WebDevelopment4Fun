@@ -1,0 +1,113 @@
+@import url(./index.css);
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 250px;
+  gap: var(--spacing-sm);
+}
+
+.logo {
+  width: 100px;
+}
+
+.github-corner {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  color: var(--color-white);
+  fill: var(--color-primary);
+
+  transform-origin: top left;
+  transition: transform var(--transition-fast);
+}
+
+.github-corner:hover {
+  transform: scale(1.2);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+
+  font-size: var(--font-title-size);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.subtitle {
+  font-size: var(--font-subtitle-size);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-muted);
+}
+
+.highlight {
+  position: relative;
+  z-index: 1;
+  color: var(--color-text-primary);
+}
+
+.highlight::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.1em;
+
+  width: 0;
+  height: var(--highlight-height);
+  background: var(--color-primary-soft);
+
+  z-index: -1;
+
+  animation: highlight 0.8s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes highlight {
+  to {
+    width: 100%;
+  }
+}
+
+.emoji::after {
+  content: "💻";
+  animation: emojiSwap 6s infinite ease-in-out;
+}
+
+@keyframes emojiSwap {
+  0% {
+    content: "💻";
+    transform: scale(0.8);
+  }
+
+  10% {
+    transform: scale(1);
+  }
+
+  25% {
+    content: "🎨";
+  }
+
+  50% {
+    content: "⚡";
+  }
+
+  75% {
+    content: "🧠";
+  }
+
+  90% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    content: "💻";
+    transform: scale(1);
+  }
+}
