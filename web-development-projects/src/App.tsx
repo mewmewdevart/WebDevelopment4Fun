@@ -22,6 +22,8 @@ function App() {
 				<p className="subtitle">
 					Learning web development by building web pages
 				</p>
+				
+				<h2>Teste</h2>
 			</header>
 		</>
 	)
