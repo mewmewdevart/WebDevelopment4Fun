@@ -1,10 +1,12 @@
+import project01Image from "../assets/projects01/project-01_mikkerun.png"
+
 const projectsData = [
   {
     name: 'Family Tourism – Mikkerun',
-    description: 'Non-commercial full layout recreation of the Mikkerun website for study purposes.',
-    imagePath: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYdYbLi_EBrxGoMpbikeLdNf75nTfKQST71g&s',
+    description: 'Non-commercial full layout recreation of the Mikkerun website for study purposes to learn masking.',
+    imagePath: project01Image,
     slug: 'project-01',
-    badgeText: 'HTML/CSS',
+    badgeText: 'Clone UI',
     category: 'frontend',
   },
 ]

@@ -33,6 +33,12 @@
   padding: 0;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #fafafa;
   font-family: "Roboto", sans-serif;
