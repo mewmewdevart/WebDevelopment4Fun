@@ -111,3 +111,46 @@
     transform: scale(1);
   }
 }
+
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  width: 100%;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+.cards-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#myBtnContainer {
+  margin: 0 0 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #dddddd;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}

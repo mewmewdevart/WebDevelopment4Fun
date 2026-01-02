@@ -22,7 +22,7 @@
   --transition-fast: 0.3s ease;
   --highlight-height: 0.6em;
 
-    font-synthesis: none;
+  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -37,6 +37,7 @@ body {
   background-color: #fafafa;
   font-family: "Roboto", sans-serif;
   font: 1rem;
+  padding: 0 20px;
 }
 
 ::selection {
