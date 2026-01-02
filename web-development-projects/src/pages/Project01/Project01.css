@@ -1,0 +1,299 @@
+/* ===================== PROJECT CONFIGURATION ===================== */
+
+.project01-container {
+  --p01-primary-yellow: #FFC400;
+  --p01-primary-blue: #347BC9;
+  --p01-accent-red: #D0495B;
+  
+  --p01-text-main: #000000;
+  --p01-text-muted: #666666;
+  --p01-text-inverse: #ffffff;
+  
+  --p01-bg-white: #ffffff;
+  
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: var(--p01-text-main);
+  font-family: sans-serif; 
+}
+
+/* ===================== SELECTION HIGHLIGHT ===================== */
+
+.project01-container ::selection {
+  background-color: var(--p01-primary-yellow);
+  color: var(--p01-text-inverse); 
+}
+
+/* ===================== MENU / NAV ===================== */
+
+.project01-container .nav-overlay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000 !important;
+    
+    opacity: 0; 
+    pointer-events: none; 
+    transition: opacity 0.4s ease-in-out;
+    background-color: transparent; 
+}
+
+.project01-container .nav-overlay.open {
+    opacity: 1;
+    background-color: var(--p01-bg-white);
+    pointer-events: all; 
+}
+
+.project01-container .nav-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    
+    background-color: var(--p01-primary-yellow);
+    color: var(--p01-text-main);
+    
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: none;
+    cursor: pointer;
+    z-index: 1001 !important;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px; 
+    padding: 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.project01-container .hamburger-bar {
+    width: 32px;
+    height: 3px;
+    background-color: var(--p01-text-main);
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    transform-origin: center; 
+}
+
+/* --- Hamburger Animation States --- */
+
+.project01-container .nav-button--open .hamburger-bar:first-child {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.project01-container .nav-button--open .hamburger-bar:nth-child(2) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.project01-container .nav-button--open .hamburger-bar:last-child {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* --- Internal Nav Structure --- */
+
+.project01-container .nav-section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Masking for the blob effect */
+    -webkit-mask-image: url('../../assets/projects01/blob-mask.svg');
+    mask-image: url('../../assets/projects01/blob-mask.svg');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: 95vw 95vh;
+    mask-size: 95vw 95vh;
+}
+
+.project01-container .nav-content {
+    background-color: var(--p01-primary-blue);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project01-container .nav-section ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.project01-container .nav-section li {
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    color: var(--p01-text-inverse);
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-bottom: 30px;
+}
+
+.project01-container .nav-section li span {
+    font-size: 1rem;
+    color: var(--p01-text-inverse);
+    font-weight: normal;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.project01-container .nav-section li:hover {
+    transform: scale(1.05);
+    color: var(--p01-primary-yellow);
+}
+
+/* ===================== MAIN DISPLAY ===================== */
+
+.project01-container .project-display {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Logo --- */
+
+.project01-container .project__logo {
+  position: absolute;
+  top: 3vmax;
+  left: 10vmax;
+  z-index: 2;
+  width: 10%;
+}
+
+.project01-container .project__logo img {
+  position: absolute;
+  width: 240%;
+}
+
+/* --- Hero Background --- */
+
+.project01-container .project__hero-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 10%;
+  
+  /* Masking */
+  -webkit-mask-image: url('../../assets/projects01/blob-mask.svg');
+  mask-image: url('../../assets/projects01/blob-mask.svg');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: 95vw 95vh;
+  mask-size: 95vw 95vh;
+}
+
+/* ===================== PROPS (Floating Animation) ===================== */
+
+.project01-container .project__props img {
+  position: absolute;
+  z-index: 99;
+  pointer-events: none; 
+  
+  animation-name: float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.project01-container .project__props img:first-child {
+  top: 5%;
+  left: 30%;
+  width: 10%;
+  animation-duration: 4s;
+  animation-delay: 0s;
+}
+
+.project01-container .project__props img:nth-child(2) {
+  top: 5%;
+  right: 4%;
+  width: 8%;
+  animation-duration: 6s;
+  animation-delay: 1s;
+}
+
+.project01-container .project__props img:nth-child(3) {
+  bottom: 45%;
+  right: 4%;
+  width: 7%;
+  animation-duration: 4s;
+  animation-delay: 0.5s;
+}
+
+.project01-container .project__props img:nth-child(4) {
+  bottom: 25%;
+  left: 2%;
+  width: 10%;
+  animation-duration: 6s;
+  animation-delay: 1.5s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* ===================== FOOTER (News Ticker) ===================== */
+
+.project01-container .project__news-ticker {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    z-index: 100 !important;
+    
+    background-color: var(--p01-bg-white);
+    border-radius: 0 20px 0 0;
+    padding: 20px 40px;
+    font-size: 0.85rem;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+.project01-container .project__news-ticker p {
+    margin: 5px 0 0 0;
+    font-weight: bold;
+    color: var(--p01-text-main);
+}
+
+.project01-container .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.75rem;
+    color: var(--p01-text-muted);
+}
+
+.project01-container .info .tag {
+    color: var(--p01-accent-red);
+}
