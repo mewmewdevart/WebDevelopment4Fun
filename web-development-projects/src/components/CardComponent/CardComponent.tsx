@@ -1,21 +1,21 @@
-import './CardComponent.css';
+import { Link } from 'react-router-dom'
+import './CardComponent.css'
 
 interface CardComponentProps {
-  name: string;
-  number: number;
-  imagePath: string;
-  description: string;
-  url: string;
-  tags?: string[]; 
-  badgeText?: string;
-  onClickAction?: () => void;
+  name: string
+  number: number
+  imagePath: string
+  description: string
+  slug?: string
+  badgeText?: string
+  onClickAction?: () => void
 }
 
 export const CardComponent = ({
   name,
   description,
   imagePath,
-  url,
+  slug,
   number,
   badgeText,
   onClickAction,
@@ -23,7 +23,7 @@ export const CardComponent = ({
   return (
     <article className="card">
       <span className="card__index">{number}</span>
-      
+
       {badgeText && <span className="card__badge">{badgeText}</span>}
 
       <img
@@ -39,23 +39,14 @@ export const CardComponent = ({
       </div>
 
       {onClickAction ? (
-        <button
-          className="card__action"
-          type="button"
-          onClick={onClickAction}
-        >
+        <button className="card__action" onClick={onClickAction}>
           Show me!
         </button>
-      ) : (
-        <a
-          className="card__action"
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      ) : slug ? (
+        <Link className="card__action" to={`/projects/${slug}`}>
           Show me!
-        </a>
-      )}
+        </Link>
+      ) : null}
     </article>
-  );
-};
+  )
+}
