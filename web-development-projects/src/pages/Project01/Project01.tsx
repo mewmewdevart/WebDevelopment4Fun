@@ -8,6 +8,7 @@ import Props01 from '../../assets/projects01/prop01.svg'
 import Props02 from '../../assets/projects01/prop02.webp'
 import Props03 from '../../assets/projects01/prop03.webp'
 import Props04 from '../../assets/projects01/prop04.webp'
+import IconBack from '../../assets//icon-back.svg'
 
 export function Project01() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,9 +17,10 @@ export function Project01() {
 
   return (
     <main className="project01-container">
-			<div className='backlink'>
-				<a href="/WebDevelopment4Fun/">Return to WebDevelopment4Fun Showcase</a>
-			</div>
+      <a href="/WebDevelopment4Fun/" className="backlink" aria-label="Go back">
+        <img src={IconBack} alt="Go back" />
+      </a>
+
       
       <button 
           className={`nav-button ${isOpen ? 'nav-button--open' : ''}`}
