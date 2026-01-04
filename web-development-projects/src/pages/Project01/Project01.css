@@ -1,22 +1,25 @@
 /* ===================== PROJECT CONFIGURATION ===================== */
 
-.project01-container {
+:root {
   --p01-primary-yellow: #FFC400;
   --p01-primary-blue: #347BC9;
   --p01-accent-red: #D0495B;
+  --p01-accent-green: #8CB809;
+  --p02-accent-brown: #50423D;
   
   --p01-text-main: #000000;
   --p01-text-muted: #666666;
   --p01-text-inverse: #ffffff;
   
   --p01-bg-white: #ffffff;
-  
+}
+
+.project01-container {
   position: relative;
-  width: 100vw;
   height: 100vh;
   overflow: hidden;
   color: var(--p01-text-main);
-  font-family: sans-serif; 
+  font-family: "Nunito Sans", sans-serif;
 }
 
 /* ===================== BACKLINK BTN ===================== */
@@ -61,7 +64,7 @@
 
 /* ===================== SELECTION HIGHLIGHT ===================== */
 
-.project01-container ::selection {
+.project01-container ::selection, .aboutUs ::selection {
   background-color: var(--p01-primary-yellow);
   color: var(--p01-text-inverse); 
 }
@@ -200,12 +203,8 @@
 
 /* ===================== MAIN DISPLAY ===================== */
 
-.project01-container .project-display {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.project01-container .project-home {
+  position: relative;
 }
 
 /* --- Logo --- */
@@ -298,7 +297,6 @@
 }
 
 /* ===================== FOOTER (News Ticker) ===================== */
-
 .project01-container .project__news-ticker {
     display: flex;
     flex-direction: column;
@@ -334,4 +332,98 @@
 
 .project01-container .info .tag {
     color: var(--p01-accent-red);
+}
+
+.project-home {
+  height: 100vh;
+  background-color: var(--p01-bg-white);
+}
+
+/* ===================== ABOUT US ===================== */
+
+.aboutUs {
+  width: 100%;
+  background-color: var(--p01-bg-white);
+  font-family: "Nunito Sans", sans-serif;
+  color: var(--p02-accent-brown);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 0;
+}
+
+h1 {
+  font-size: 53px;
+  line-height: 111px;
+  color: var(--p01-accent-brown);
+  text-align: center;
+}
+
+/* ===================== ARTICLE ===================== */
+
+.about-article {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.about-article .content {
+  width: 100%;
+  max-width: 1400px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-article.reverse .content {
+  direction: rtl;
+}
+
+.about-article.reverse .content > * {
+  direction: ltr;
+}
+
+/* ===================== IMAGE ===================== */
+
+.about-article img {
+  width: 100%;
+  max-width: 480px;
+
+  border-radius: 32px;
+  object-fit: cover;
+}
+
+/* ===================== TEXT ===================== */
+
+.about-article .text {
+  max-width: 620px;
+  line-height: 32px;
+  letter-spacing: 0.04em;
+}
+.about-article .center {
+  text-align: center;
+}
+
+.about-article h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.about-article h2.red {
+  color: var(--p01-accent-red);
+}
+
+.about-article h2.blue {
+  color: var(--p01-primary-blue);
+}
+
+.about-article h2.green {
+  color: var(--p01-accent-green);
 }
